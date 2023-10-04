@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Text List</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>This is a technical test for VECI</h1>
+      <p>
+        To use this app, follow these steps:
+        Click the "Add" button to add a new text item. You can select a text item by
+        clicking on it. The selected item will appear with a different background
+        color. To delete a selected item, click the "Delete" button. If no item is
+        selected, it won't delete anything. To undo the last action (add or delete),
+        click the "Undo" button. If you wish to add more text items, repeat step 1.
+        You can also close the modal without adding an item by clicking "Cancel" in
+        the modal.
+      </p>
+      <ul class="list" id="list"></ul>
+      <div class="container__fotter">
+        <div class="container__fotter__remove__buttons" >
+            <button class=" remove__button" id="undoButton">
+             undo
+            </button>
+            <button class=" remove__button" id="deleteButton">Delete</button>
+        </div>
+        <div class="container__fotter__add__button" > 
+            <button class="button" id="addButton">Add</button>
+
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <input
+          class="modal__input"
+          type="text"
+          id="modalInput"
+          placeholder="Enter text"
+        />
+        <button class="button modal__button" id="modalAddButton">Add</button>
+        <button class="button modal__button" id="modalCancelButton">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
