@@ -1,0 +1,57 @@
+.textListContainer {
+  width: 30vw;
+  min-width: 300px;
+  height: auto;
+  min-height: 30vh;
+  font-size: 0.8em;
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.textListContainer__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0px;
+}
+
+.textListContainer__footer__removeButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+
+.removeButton {
+  padding: 10px 20px;
+  border: 1px solid #324bff;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #324bff;
+  text-transform: uppercase;
+}
+
+.removeButton:hover {
+  background-color: #324bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addButton{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: #324bff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.addButton:hover{
+    background-color: #fff;
+    color: #324bff;
+    border: 1px solid #324bff;
+}
+
