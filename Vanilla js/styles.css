@@ -92,13 +92,13 @@ body {
   border-radius: 5px;
 }
 
-.container__fotter {
+.container__footer {
   display: flex;
   justify-content: space-between;
   padding: 16px 0px;
 }
 
-.container__fotter__remove__button {
+.container__footer__remove__button {
   display: flex;
   justify-content: space-between;
   width: 10vw;
