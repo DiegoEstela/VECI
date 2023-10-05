@@ -8,9 +8,9 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>This is a technical test for VECI</h1>
-      <p>
+    <div class="text-list">
+      <h1 class="text-list__title" >This is a technical test for VECI</h1>
+      <p class="text-list__paragraph">
         To use this app, follow these steps:
         Click the "Add" button to add a new text item. You can select a text item by
         clicking on it. The selected item will appear with a different background
@@ -20,15 +20,15 @@
         You can also close the modal without adding an item by clicking "Cancel" in
         the modal.
       </p>
-      <ul class="list" id="list"></ul>
-      <div class="container__footer">
-        <div class="container__footer__remove__buttons" >
-            <button class=" remove__button" id="undoButton">
+      <ul class="text-list__items" id="list"></ul>
+      <div class="text-list__footer">
+        <div class="text-list__footer-buttons" >
+            <button class="button-remove" id="undoButton">
              undo
             </button>
-            <button class=" remove__button" id="deleteButton">Delete</button>
+            <button class="button-remove" id="deleteButton">Delete</button>
         </div>
-        <div class="container__footer__add__button" > 
+        <div class="text-list__footer-add-button"> 
             <button class="button" id="addButton">Add</button>
 
         </div>
