@@ -31,6 +31,7 @@
   background-color: #fff;
   color: #324bff;
   text-transform: uppercase;
+  margin-right: 16px;
 }
 
 .text-list-container__footer-remove-buttons__button:hover {

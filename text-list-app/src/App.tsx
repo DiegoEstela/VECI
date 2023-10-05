@@ -6,7 +6,7 @@ import {
   handleAddText,
   handleDeleteSelectedText,
   handleUndo,
-} from "./useCases/crudText";
+} from "./application/crudText";
 import TextList from "./presentation/components/textList";
 import Modal from "./presentation/components/modal";
 import "./App.css";
@@ -17,6 +17,7 @@ const App: React.FC = (): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedTextIndex, setSelectedTextIndex] = useState<number | null>(null);
   const [lastAction, setLastAction] = useState<string | null>(null);
+
 
   return (
     <div className="text-list-container">

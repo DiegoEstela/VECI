@@ -5,7 +5,6 @@ import './index.css';
 
 
 const TextList: React.FC<TextListProps> = ({ texts, onSelectText, selectedTextIndex }) : JSX.Element => {
-
   return (
     <ul className="text-list">
       {texts.map((text, index) => (

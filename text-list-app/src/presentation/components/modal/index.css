@@ -42,7 +42,7 @@
   justify-content: space-around;
 }
 
-.modal__button{
+.modal__button--add{
   padding: 10px 20px;
   border: none;
   border-radius: 100px;
@@ -50,4 +50,15 @@
   background-color: #324bff;
   color: #fff;
   text-transform: uppercase;
+}
+
+.modal__button--cancel{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #324bff;
+  text-transform: uppercase;
+  border: 1px solid #324bff;
 }
