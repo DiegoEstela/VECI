@@ -13,7 +13,7 @@ export interface ModalProps {
 export interface TextListProps {
   texts: string[];
   onSelectText: (index: number | null) => void;
-  selectedTextIndex: number | null; // Agregamos la propiedad selectedTextIndex
+  selectedTextIndex: number | null; 
 }
 
 export interface AppState {
