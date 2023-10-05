@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -112,6 +111,7 @@ body {
   background-color: #fff;
   color: #324bff;
   text-transform: uppercase;
+  margin-right: 16px;
 }
 
 .button-remove:hover {
@@ -119,16 +119,15 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
 .button {
   padding: 10px 20px;
   border: none;
-  border-radius: 100px;
+  border-radius: 10px;
   cursor: pointer;
+  margin-right: 10px;
   background-color: #324bff;
   color: #fff;
   text-transform: uppercase;
-  outline: none;
 }
 
 .button:hover {

@@ -2,7 +2,7 @@ class TextManager {
   constructor() {
     this.texts = [];
     this.undoStack = [[]];
-    this.selectedTextIndex = -1;
+    this.selectedTextIndices = []; // Array to store selected indices
     this.initializeDOM();
   }
 
@@ -52,27 +52,39 @@ class TextManager {
   }
 
   handleRowSelection(selectedIndex) {
-    this.selectedTextIndex = selectedIndex;
+    // Toggle selection for the clicked index
+    const index = parseInt(selectedIndex, 10);
+    const indexInSelected = this.selectedTextIndices.indexOf(index);
+    if (indexInSelected === -1) {
+      this.selectedTextIndices.push(index);
+    } else {
+      this.selectedTextIndices.splice(indexInSelected, 1);
+    }
+
     this.showTexts();
   }
 
   deleteText() {
-    if (
-      this.selectedTextIndex >= 0 &&
-      this.selectedTextIndex < this.texts.length
-    ) {
-      this.texts.splice(this.selectedTextIndex, 1);
-      this.selectedTextIndex = -1;
-      this.updateUndoStack();
-      this.showTexts();
+    for (let i = this.selectedTextIndices.length - 1; i >= 0; i--) {
+      const index = this.selectedTextIndices[i];
+      this.texts.splice(index, 1);
     }
+    this.selectedTextIndices = [];
+    this.updateUndoStack();
+    this.showTexts();
+  }
+
+  deleteTextByIndex(index) {
+    this.texts.splice(index, 1);
+    this.updateUndoStack();
+    this.showTexts();
   }
 
   undo() {
     if (this.undoStack.length > 1) {
       this.undoStack.pop();
       this.texts = [...this.undoStack[this.undoStack.length - 1]];
-      this.selectedTextIndex = -1;
+      this.selectedTextIndices = [];
       this.showTexts();
     }
   }
@@ -90,7 +102,7 @@ class TextManager {
       li.classList.add("list__item");
       li.dataset.index = i;
 
-      if (i == this.selectedTextIndex) {
+      if (this.selectedTextIndices.includes(i)) {
         li.classList.add("selected");
       }
 

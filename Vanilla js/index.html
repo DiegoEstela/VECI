@@ -9,31 +9,27 @@
 
   <body>
     <div class="text-list">
-      <h1 class="text-list__title" >This is a technical test for VECI</h1>
+      <h1 class="text-list__title">This is a technical test for VECI</h1>
       <p class="text-list__paragraph">
-        To use this app, follow these steps:
-        Click the "Add" button to add a new text item. You can select a text item by
-        clicking on it. The selected item will appear with a different background
-        color. To delete a selected item, click the "Delete" button. If no item is
-        selected, it won't delete anything. To undo the last action (add or delete),
-        click the "Undo" button. If you wish to add more text items, repeat step 1.
-        You can also close the modal without adding an item by clicking "Cancel" in
-        the modal.
+        To use this app, follow these steps: Click the “Add” button to add a new
+        text element. You can select one or more text elements by clicking on
+        them. Selected items will appear with a different background color. To
+        delete a selected item, click the "Delete" button. If no item is
+        selected, it will not delete anything. To undo the last action (add or
+        delete), click the "Undo" button. If you want to add more text elements,
+        repeat step 1. You can also close the modal without adding an element by
+        clicking "Cancel" in the modal.
       </p>
       <ul class="text-list__items" id="list"></ul>
       <div class="text-list__footer">
-        <div class="text-list__footer-buttons" >
-            <button class="button-remove" id="undoButton">
-             undo
-            </button>
-            <button class="button-remove" id="deleteButton">Delete</button>
+        <div class="text-list__footer-buttons">
+          <button class="button-remove" id="undoButton">undo</button>
+          <button class="button-remove" id="deleteButton">Delete</button>
         </div>
-        <div class="text-list__footer-add-button"> 
-            <button class="button" id="addButton">Add</button>
-
+        <div class="text-list__footer-add-button">
+          <button class="button" id="addButton">Add</button>
         </div>
       </div>
-     
     </div>
 
     <div class="modal" id="modal">
@@ -43,6 +39,7 @@
           type="text"
           id="modalInput"
           placeholder="Enter text"
+          autofocus
         />
         <button class="button modal__button" id="modalAddButton">Add</button>
         <button class="button modal__button" id="modalCancelButton">
