@@ -15,13 +15,11 @@ const App: React.FC = (): JSX.Element => {
   const dispatch: AppDispatch = useDispatch();
   const texts : string[] = useSelector(selectTexts);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const [selectedTextIndex, setSelectedTextIndex] = useState<number | null>(
-    null
-  );
+  const [selectedTextIndex, setSelectedTextIndex] = useState<number | null>(null);
   const [lastAction, setLastAction] = useState<string | null>(null);
 
   return (
-    <div className="textListContainer">
+    <div className="text-list-container">
       <h1>Text List App</h1>
       <p>
         To use this app, follow these steps: Click the "Add" button to add a new
@@ -38,10 +36,10 @@ const App: React.FC = (): JSX.Element => {
         onSelectText={(index) => setSelectedTextIndex(index)}
         selectedTextIndex={selectedTextIndex}
       />
-      <div className="textListContainer__footer">
-        <div className="textListContainer__footer__removeButtons">
+      <div className="text-list-container__footer">
+        <div className="text-list-container__footer-remove-buttons">
           <button
-            className="removeButton"
+            className="text-list-container__footer-remove-buttons__button"
             onClick={() =>
               handleUndo(
                 lastAction,
@@ -58,7 +56,7 @@ const App: React.FC = (): JSX.Element => {
             Undo
           </button>
           <button
-            className="removeButton"
+            className="text-list-container__footer-remove-buttons__button"
             onClick={() =>
               handleDeleteSelectedText(
                 selectedTextIndex,
@@ -73,8 +71,8 @@ const App: React.FC = (): JSX.Element => {
             Delete
           </button>
         </div>
-        <div className="textListContainer__footer__addButton">
-          <button className="addButton" onClick={() => setIsModalOpen(true)}>
+        <div className="text-list-container__footer-add-button">
+          <button className="text-list-container__footer-add-button__button" onClick={() => setIsModalOpen(true)}>
             Add Text
           </button>
         </div>

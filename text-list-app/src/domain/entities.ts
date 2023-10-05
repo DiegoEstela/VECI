@@ -15,3 +15,8 @@ export interface TextListProps {
   onSelectText: (index: number | null) => void;
   selectedTextIndex: number | null; // Agregamos la propiedad selectedTextIndex
 }
+
+export interface AppState {
+  texts: string[];
+}
+

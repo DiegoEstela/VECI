@@ -1,9 +1,7 @@
+import { AppState } from '../domain/entities';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
 
-interface AppState {
-  texts: string[];
-}
 
 const initialState: AppState = {
   texts: [],

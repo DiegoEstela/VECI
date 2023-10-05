@@ -5,7 +5,7 @@ import { handleAddText } from "../../../useCases/modalHandles";
 
 
 
-const Modal: React.FC<ModalProps> = ({ onClose, onAddText }) => {
+const Modal: React.FC<ModalProps> = ({ onClose, onAddText }) :JSX.Element => {
   const [text, setText] = useState<string>("");
 
   return (
@@ -19,15 +19,13 @@ const Modal: React.FC<ModalProps> = ({ onClose, onAddText }) => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
         />
         <div className="modal__footer">
-        <button className="modal__button" onClick={() =>handleAddText(text,onAddText,setText,onClose)} >
-          Add
-        </button>
-        <button className="modal__button" onClick={onClose}>
-          Cancel
-        </button>
-
+          <button className="modal__button" onClick={() => handleAddText(text, onAddText, setText, onClose)} >
+            Add
+          </button>
+          <button className="modal__button" onClick={onClose}>
+            Cancel
+          </button>
         </div>
-       
       </div>
     </div>
   );

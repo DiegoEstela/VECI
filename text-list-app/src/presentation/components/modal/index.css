@@ -22,7 +22,7 @@
 }
 
 .modal__content {
-  text-align: center;
+  width: 20vw;
   background-color: #fefefe;
   padding: 20px;
   border-radius: 5px;
